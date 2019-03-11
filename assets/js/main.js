@@ -42,6 +42,11 @@ class RepoSearch {
       }
       this.updateData(realData);
     });
+    const settingsIcon = document.querySelector(".fa-cog");
+    settingsIcon.addEventListener("click", () => {
+      const menu = document.getElementById("menu");
+      menu.style.display = menu.style.display == "none" ? "" : "none";
+    });
   }
   initialRender() {
     const url = `https://api.github.com/users/${

@@ -47,6 +47,14 @@ class RepoSearch {
       const menu = document.getElementById("menu");
       menu.style.display = menu.style.display == "none" ? "block" : "none";
     });
+    const userButton = document.querySelector("#change-github");
+    userButton.addEventListener("click", () => {
+      const input = document.querySelector("#githubuser").value;
+      if (input != "") {
+        this.githubName = input;
+        this.initialRender();
+      }
+    });
   }
   initialRender() {
     const url = `https://api.github.com/users/${

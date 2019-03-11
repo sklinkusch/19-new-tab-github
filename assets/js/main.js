@@ -21,8 +21,9 @@ class Time {
 }
 
 class RepoSearch {
-  constructor(domSel) {
+  constructor(domSel, outputDomSel) {
     this.searchfield = document.querySelector(domSel);
+    this.outputField = document.querySelector(outputDomSel);
   }
 }
 

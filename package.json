@@ -1,0 +1,20 @@
+{
+  "name": "19-new-tab-github-sklinkusch",
+  "version": "0.0.1",
+  "description": "_A \"New Tab Page\" for developers, search in your repositories and see the latest_",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FBW-12/19-new-tab-github-sklinkusch.git"
+  },
+  "keywords": [],
+  "author": "Stefan Klinkusch <stefan.klinkusch@googlemail.com> (https://sklinkusch.github.io/portfolio/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FBW-12/19-new-tab-github-sklinkusch/issues"
+  },
+  "homepage": "https://github.com/FBW-12/19-new-tab-github-sklinkusch#readme"
+}

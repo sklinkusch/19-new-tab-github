@@ -28,8 +28,20 @@ class RepoSearch {
     this.id = "3a6a22eb32c03ecfd02b";
     this.secret = "6c1e72cc2af26bdab69798e0ce85f86fb00c3584";
     this.initialRender();
-    // this.render("");
-    // this.addEventListeners();
+    this.addEventListeners();
+  }
+  addEventListeners() {
+    const feld = document.querySelector("#reposearch");
+    feld.addEventListener("input", event => {
+      const filterValue = event.target.value;
+      let realData;
+      if (filterValue == "") {
+        realData = this.data;
+      } else {
+        realData = this.data.filter(repo => repo.name.includes(filterValue));
+      }
+      this.updateData(realData);
+    });
   }
   initialRender() {
     const url = `https://api.github.com/users/${
@@ -37,11 +49,13 @@ class RepoSearch {
     }/repos?per_page=100&client_id=${this.id}&client_secret=${this.secret}`;
     fetch(url)
       .then(response => response.json())
-      .then(data => this.updateData(data))
+      .then(data => {
+        this.data = data;
+        this.updateData(data);
+      })
       .catch(error => console.log(error));
   }
   updateData(repos) {
-    this.data = repos;
     let html = repos
       .map(repo => {
         const {

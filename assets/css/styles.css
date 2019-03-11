@@ -26,6 +26,17 @@ body {
   z-index: 3;
   display: none;
 }
+#images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.background {
+  flex: 0 0 150px;
+}
+.background img {
+  width: 140px;
+}
 div#time {
   margin: 60pt auto 40pt auto;
   padding: 10pt;

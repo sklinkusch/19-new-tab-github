@@ -1,8 +1,7 @@
 class Time {
   constructor(docSel) {
     this.container = document.querySelector(docSel);
-    this.getTime();
-    // this.repeat();
+    this.repeat();
   }
   getTime() {
     const timeObject = moment();
@@ -12,8 +11,12 @@ class Time {
     const hourString = hours < 10 ? `0${hours}` : `${hours}`;
     const minString = minutes < 10 ? `0${minutes}` : `${minutes}`;
     const outputTime = `${hourString}:${minString}`;
-    console.log(outputTime);
     this.container.innerHTML = outputTime;
+  }
+  repeat() {
+    setInterval(() => {
+      this.getTime();
+    }, 1000);
   }
 }
 

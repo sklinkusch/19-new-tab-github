@@ -18,12 +18,26 @@ div#time {
 #searchcontainer {
   margin: 0 auto;
   width: 50%;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 6px;
+}
+label {
+  display: inline-block;
+  width: 40px;
+  background-color: white;
+  text-align: center;
+  padding: 2px;
+  border: 1px solid gray;
+  border-radius: 5px;
 }
 #reposearch {
-  display: block;
+  display: inline-block;
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
   padding: 2px;
+  border: 1px solid gray;
   border-radius: 5px;
 }
 div#repos {

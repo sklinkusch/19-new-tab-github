@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/FBW-12/19-new-tab-github-sklinkusch/issues"
   },
-  "homepage": "https://github.com/FBW-12/19-new-tab-github-sklinkusch#readme"
+  "homepage": "https://github.com/FBW-12/19-new-tab-github-sklinkusch#readme",
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
 }

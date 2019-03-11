@@ -10,6 +10,7 @@ div#time {
   margin: 60pt auto 40pt auto;
   padding: 10pt;
   color: white;
-  font-size: 72pt;
+  font-size: 90pt;
+  font-family: "sans-serif";
   text-align: center;
 }

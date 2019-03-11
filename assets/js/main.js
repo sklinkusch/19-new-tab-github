@@ -45,7 +45,7 @@ class RepoSearch {
     const settingsIcon = document.querySelector(".fa-cog");
     settingsIcon.addEventListener("click", () => {
       const menu = document.getElementById("menu");
-      menu.style.display = menu.style.display == "none" ? "" : "none";
+      menu.style.display = menu.style.display == "none" ? "block" : "none";
     });
   }
   initialRender() {

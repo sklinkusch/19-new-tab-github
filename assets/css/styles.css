@@ -3,3 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-image: url(../img/pawel-czerwinski-1424194-unsplash.jpg);
+}

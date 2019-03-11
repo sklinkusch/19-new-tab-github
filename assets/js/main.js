@@ -13,7 +13,7 @@ class Time {
     const minString = minutes < 10 ? `0${minutes}` : `${minutes}`;
     const outputTime = `${hourString}:${minString}`;
     console.log(outputTime);
-    this.container = outputTime;
+    this.container.innerHTML = outputTime;
   }
 }
 

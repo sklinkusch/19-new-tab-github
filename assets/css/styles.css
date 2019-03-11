@@ -6,3 +6,10 @@
 body {
   background-image: url(../img/pawel-czerwinski-1424194-unsplash.jpg);
 }
+div#time {
+  margin: 60pt auto 40pt auto;
+  padding: 10pt;
+  color: white;
+  font-size: 72pt;
+  text-align: center;
+}

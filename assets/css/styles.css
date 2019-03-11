@@ -5,6 +5,7 @@
 }
 body {
   background-image: url(../img/pawel-czerwinski-1424194-unsplash.jpg);
+  overflow: hidden;
 }
 #titlebar {
   padding: 5px;

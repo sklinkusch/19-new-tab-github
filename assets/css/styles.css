@@ -12,6 +12,18 @@ body {
   color: white;
   font-size: 1.2em;
 }
+#menu {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  width: 400px;
+  /* height: 0px; */
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 3;
+}
 div#time {
   margin: 60pt auto 40pt auto;
   padding: 10pt;

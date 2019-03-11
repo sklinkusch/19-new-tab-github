@@ -20,4 +20,10 @@ class Time {
   }
 }
 
+class RepoSearch {
+  constructor(domSel) {
+    this.searchfield = document.querySelector(domSel);
+  }
+}
+
 const myTime = new Time("#time");

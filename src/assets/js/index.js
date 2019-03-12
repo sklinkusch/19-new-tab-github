@@ -71,7 +71,7 @@ class RepoSearch {
   initialBackground() {
     const backgroundSource =
       localStorage.getItem("background") ||
-      "url(assets/img/pawel-czerwinski-1424194-unsplash.jpg)";
+      "url(assets/pawel-czerwinski-1424194-unsplash.jpg)";
     document.body.style.backgroundImage = `url(${backgroundSource})`;
     localStorage.setItem("background", backgroundSource);
   }

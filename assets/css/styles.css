@@ -27,10 +27,14 @@ body {
   z-index: 3;
   display: none;
 }
+#menu h3 {
+  margin: 10px 0;
+}
 #images {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 .background {
   flex: 0 0 150px;

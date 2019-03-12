@@ -79,8 +79,17 @@ class RepoSearch {
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        this.data = data;
-        this.updateData(data);
+        const sorted = data.sort((a, b) => {
+          if (a.created_at > b.created_at) {
+            return -1;
+          } else if (b.created_at < a.created_at) {
+            return +1;
+          } else {
+            return 0;
+          }
+        });
+        this.data = sorted;
+        this.updateData(sorted);
       })
       .catch(error => console.log(error));
   }

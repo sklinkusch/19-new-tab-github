@@ -39,7 +39,9 @@ class RepoSearch {
       if (filterValue == "") {
         realData = this.data;
       } else {
-        realData = this.data.filter(repo => repo.name.includes(filterValue));
+        realData = this.data.filter(repo =>
+          repo.name.toLowerCase().includes(filterValue.toLowerCase())
+        );
       }
       this.updateData(realData);
     });

@@ -64,7 +64,7 @@ class RepoSearch {
       image.addEventListener("click", event => {
         const imageSource = event.target.src;
         document.body.style.backgroundImage = `url(${imageSource})`;
-        const titlebar = document.querySelector("#titlebar");
+        const titlebar = document.getElementById("titlebar");
         const timeContainer = document.getElementById("time");
         const lastTitle = document.getElementById("lasttitle");
         if (imageSource.includes("1424180")) {
@@ -85,12 +85,15 @@ class RepoSearch {
       localStorage.getItem("background") ||
       "assets/pawel-czerwinski-1424194-unsplash.jpg";
     document.body.style.backgroundImage = `url(${backgroundSource})`;
+    const titlebar = document.getElementById("titlebar");
     const timeContainer = document.getElementById("time");
     const lastTitle = document.getElementById("lasttitle");
     if (backgroundSource.includes("1424180")) {
+      titlebar.style.color = "black";
       timeContainer.style.color = "black";
       lastTitle.style.color = "black";
     } else {
+      titlebar.style.color = "white";
       timeContainer.style.color = "white";
       lastTitle.style.color = "white";
     }

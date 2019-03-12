@@ -9,9 +9,13 @@ body {
   overflow: hidden;
 }
 #titlebar {
-  padding: 5px;
+  padding: 10px;
   text-align: right;
   font-size: 1.2em;
+  .fa-cog {
+    display: block;
+    padding: 10px;
+  }
 }
 #menu {
   position: absolute;

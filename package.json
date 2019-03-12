@@ -4,6 +4,8 @@
   "description": "_A \"New Tab Page\" for developers, search in your repositories and see the latest_",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

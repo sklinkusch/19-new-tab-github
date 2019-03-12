@@ -27,6 +27,7 @@ class RepoSearch {
     this.githubName = "sklinkusch";
     this.id = "3a6a22eb32c03ecfd02b";
     this.secret = "6c1e72cc2af26bdab69798e0ce85f86fb00c3584";
+    this.initialBackground();
     this.initialRender();
     this.addEventListeners();
   }
@@ -55,6 +56,21 @@ class RepoSearch {
         this.initialRender();
       }
     });
+    const backgroundImages = document.querySelectorAll(".background");
+    backgroundImages.forEach(image => {
+      image.addEventListener("click", event => {
+        const imageSource = event.target.src;
+        document.body.style.backgroundImage = `url(${imageSource})`;
+        localStorage.setItem("background", imageSource);
+      });
+    });
+  }
+  initialBackground() {
+    const backgroundSource =
+      localStorage.getItem("background") ||
+      "url(assets/img/pawel-czerwinski-1424194-unsplash.jpg)";
+    document.body.style.backgroundImage = `url(${backgroundSource})`;
+    localStorage.setItem("background", backgroundSource);
   }
   initialRender() {
     const url = `https://api.github.com/users/${

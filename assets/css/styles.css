@@ -43,7 +43,7 @@ body {
   width: 140px;
 }
 div#time {
-  margin: 60pt auto 40pt auto;
+  margin: 60pt auto 80pt auto;
   padding: 10pt;
   color: white;
   font-size: 90pt;
@@ -53,7 +53,7 @@ div#time {
   height: 100pt;
 }
 #searchcontainer {
-  margin: 0 auto;
+  margin: 100px auto 150px auto;
   width: 50%;
   display: flex;
   justify-content: center;
@@ -89,8 +89,8 @@ div#repos {
   background-color: white;
   flex: 0 0 19%;
   border-radius: 10px;
-  margin: 0 5px;
-  padding: 2px;
+  margin: 0 10px;
+  padding: 10px;
 }
 div#repos li {
   list-style: inside;

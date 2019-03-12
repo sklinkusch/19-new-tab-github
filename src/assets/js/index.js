@@ -130,7 +130,6 @@ class RepoSearch {
           description,
           created_at,
           language,
-          html_url,
           has_pages,
           pushed_at
         } = repo;
@@ -143,7 +142,6 @@ class RepoSearch {
         } else {
           shortDescription = null;
         }
-        const githubPages = `https://${this.name}.github.io/${name}`;
         return `
     <div class="image-card">
     <h2>${name}</h2>

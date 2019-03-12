@@ -26,8 +26,6 @@ class RepoSearch {
     this.searchfield = document.querySelector(domSel);
     this.outputField = document.querySelector(outputDomSel);
     this.githubName = "sklinkusch";
-    this.id = "3a6a22eb32c03ecfd02b";
-    this.secret = "6c1e72cc2af26bdab69798e0ce85f86fb00c3584";
     this.initialBackground();
     this.initialRender();
     this.addEventListeners();
@@ -104,7 +102,9 @@ class RepoSearch {
   initialRender() {
     const url = `https://api.github.com/users/${
       this.githubName
-    }/repos?per_page=100&client_id=${this.id}&client_secret=${this.secret}`;
+    }/repos?per_page=100&client_id=${process.env.ID}&client_secret=${
+      process.env.SECRET
+    }`;
     fetch(url)
       .then(response => response.json())
       .then(data => {

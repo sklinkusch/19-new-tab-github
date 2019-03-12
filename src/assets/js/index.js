@@ -64,7 +64,7 @@ class RepoSearch {
       image.addEventListener("click", event => {
         const imageSource = event.target.src;
         document.body.style.backgroundImage = `url(${imageSource})`;
-        const titlebar = document.getElementById("titlebar");
+        const titlebar = document.querySelector(".fa-cog");
         const timeContainer = document.getElementById("time");
         const lastTitle = document.getElementById("lasttitle");
         if (imageSource.includes("1424180")) {

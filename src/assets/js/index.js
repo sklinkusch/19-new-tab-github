@@ -64,6 +64,18 @@ class RepoSearch {
       image.addEventListener("click", event => {
         const imageSource = event.target.src;
         document.body.style.backgroundImage = `url(${imageSource})`;
+        const titlebar = document.querySelector("#titlebar");
+        const timeContainer = document.getElementById("time");
+        const lastTitle = document.getElementById("lasttitle");
+        if (imageSource.includes("1424180")) {
+          titlebar.style.color = "black";
+          timeContainer.style.color = "black";
+          lastTitle.style.color = "black";
+        } else {
+          titlebar.style.color = "white";
+          timeContainer.style.color = "white";
+          lastTitle.style.color = "white";
+        }
         localStorage.setItem("background", imageSource);
       });
     });
@@ -71,8 +83,17 @@ class RepoSearch {
   initialBackground() {
     const backgroundSource =
       localStorage.getItem("background") ||
-      "url(assets/pawel-czerwinski-1424194-unsplash.jpg)";
+      "assets/pawel-czerwinski-1424194-unsplash.jpg";
     document.body.style.backgroundImage = `url(${backgroundSource})`;
+    const timeContainer = document.getElementById("time");
+    const lastTitle = document.getElementById("lasttitle");
+    if (backgroundSource.includes("1424180")) {
+      timeContainer.style.color = "black";
+      lastTitle.style.color = "black";
+    } else {
+      timeContainer.style.color = "white";
+      lastTitle.style.color = "white";
+    }
     localStorage.setItem("background", backgroundSource);
   }
   initialRender() {

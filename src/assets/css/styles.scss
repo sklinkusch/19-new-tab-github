@@ -54,10 +54,19 @@ div#time {
   font-family: "sans-serif";
   text-align: center;
   height: 100pt;
+  @media screen and (max-width: 450px) {
+    font-size: 75pt;
+    height: 80pt;
+  }
+  @media screen and (max-width: 350px) {
+    font-size: 60pt;
+    height: 80pt;
+  }
 }
 #searchcontainer {
   margin: 100px auto 100px auto;
   width: 50%;
+  min-width: 300px;
   display: flex;
   justify-content: center;
   background-color: white;
@@ -88,7 +97,7 @@ label {
   justify-content: flex-start;
   .image-card {
     background-color: white;
-    flex: 0 0 19%;
+    flex: 0 0 200px;
     border-radius: 10px;
     margin: 0 10px;
     border: 2px solid black;

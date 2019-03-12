@@ -46,7 +46,7 @@ class RepoSearch {
       }
       this.updateData(realData);
     });
-    const settingsIcon = document.querySelector(".fa-cog");
+    const settingsIcon = document.querySelector("#toggler");
     settingsIcon.addEventListener("click", () => {
       const menu = document.getElementById("menu");
       menu.style.display = menu.style.display == "none" ? "block" : "none";
@@ -85,7 +85,7 @@ class RepoSearch {
       localStorage.getItem("background") ||
       "assets/pawel-czerwinski-1424194-unsplash.jpg";
     document.body.style.backgroundImage = `url(${backgroundSource})`;
-    const titlebar = document.getElementById("titlebar");
+    const titlebar = document.querySelector(".fa-cog");
     const timeContainer = document.getElementById("time");
     const lastTitle = document.getElementById("lasttitle");
     if (backgroundSource.includes("1424180")) {

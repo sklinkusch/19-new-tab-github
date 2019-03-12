@@ -31,6 +31,7 @@ class RepoSearch {
     this.initialBackground();
     this.initialRender();
     this.addEventListeners();
+    this.menuStyle = "none";
   }
   addEventListeners() {
     const feld = document.querySelector("#reposearch");
@@ -49,7 +50,8 @@ class RepoSearch {
     const settingsIcon = document.querySelector("#toggler");
     settingsIcon.addEventListener("click", () => {
       const menu = document.getElementById("menu");
-      menu.style.display = menu.style.display == "none" ? "block" : "none";
+      menu.style.display = this.menuStyle == "none" ? "block" : "none";
+      this.menuStyle = menu.style.display;
     });
     const userButton = document.querySelector("#change-github");
     userButton.addEventListener("click", () => {

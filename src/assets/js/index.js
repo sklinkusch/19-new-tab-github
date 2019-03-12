@@ -1,3 +1,4 @@
+const moment = require("moment");
 class Time {
   constructor(docSel) {
     this.container = document.querySelector(docSel);

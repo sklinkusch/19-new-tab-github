@@ -54,7 +54,7 @@ body {
 div#time {
   margin: 60pt auto 80pt auto;
   padding: 10pt;
-  font-size: 90pt;
+  font-size: 80pt;
   font-weight: bold;
   font-family: "sans-serif";
   text-align: center;
@@ -69,13 +69,13 @@ div#time {
   }
   @media screen and (max-height: 900px) {
     margin: 20px auto;
-    font-size: 75pt;
+    font-size: 55pt;
     height: 80pt;
   }
   @media screen and (max-height: 650px) {
     margin: 15px auto;
-    font-size: 60pt;
-    height: 70pt;
+    font-size: 35pt;
+    height: 60pt;
   }
 }
 #searchcontainer {
@@ -161,4 +161,7 @@ label {
 #lasttitle {
   margin-left: 20px;
   margin-bottom: 20px;
+}
+.small {
+  font-size: 20pt;
 }

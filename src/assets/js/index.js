@@ -11,7 +11,13 @@ class Time {
     const minutes = currentTime.getMinutes();
     const hourString = hours < 10 ? `0${hours}` : `${hours}`;
     const minString = minutes < 10 ? `0${minutes}` : `${minutes}`;
-    const outputTime = `${hourString}:${minString}`;
+    let days = moment().date();
+    let month = moment().month() + 1;
+    let year = moment().year();
+    month = month < 10 ? `0${month}` : `${month}`;
+    days = days < 10 ? `0${days}` : `${days}`;
+    const dateString = `${days}/${month}/${year}`;
+    const outputTime = `${hourString}:${minString}<br><div class="small">${dateString}</div>`;
     this.container.innerHTML = outputTime;
   }
   repeat() {

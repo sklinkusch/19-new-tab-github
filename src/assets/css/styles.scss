@@ -67,9 +67,19 @@ div#time {
     font-size: 60pt;
     height: 80pt;
   }
+  @media screen and (max-height: 900px) {
+    margin: 20px auto;
+    font-size: 75pt;
+    height: 80pt;
+  }
+  @media screen and (max-height: 650px) {
+    margin: 15px auto;
+    font-size: 60pt;
+    height: 70pt;
+  }
 }
 #searchcontainer {
-  margin: 100px auto 100px auto;
+  margin: 100px auto;
   width: 500px;
   display: flex;
   justify-content: center;
@@ -83,6 +93,12 @@ div#time {
   }
   @media screen and (max-width: 350px) {
     width: 250px;
+  }
+  @media screen and (max-height: 900px) {
+    margin: 30px auto;
+  }
+  @media screen and (max-height: 650px) {
+    margin: 20px auto;
   }
 }
 label {

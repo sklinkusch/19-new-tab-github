@@ -187,5 +187,38 @@ class RepoSearch {
   }
 }
 
+class ExchangeRates {
+  constructor(domSel) {
+    this.container = document.querySelector(domSel);
+    this.repeat();
+  }
+  repeat() {
+    setInterval(() => {
+      this.getData();
+    }, 1000);
+  }
+  getData() {
+    const url = "https://api.exchangeratesapi.io/latest";
+    fetch(url)
+      .then(response => response.json())
+      .then(data => this.updateData(data))
+      .catch(error => console.log(error));
+  }
+  updateData(data) {
+    const { base, date, rates } = data;
+    const html = `
+    <h4>Exchange Rates (${base})</h4>
+    <ul id="rates">
+    <li>$: ${rates.USD}</li>
+    <li>£: ${rates.GBP}</li>
+    <li>¥: ${rates.JPY}</li>
+    <li>SFr: ${rates.CHF}</li>
+    </ul>
+    <p>valid of: ${date}</p>
+    `;
+    this.container.innerHTML = html;
+  }
+}
 const myTime = new Time("#time");
 const myGithub = new RepoSearch("#searchfield", "#repos");
+const exchange = new ExchangeRates("#exchange");

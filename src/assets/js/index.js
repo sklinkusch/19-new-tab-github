@@ -51,6 +51,12 @@ class RepoSearch {
       menu.style.display = this.menuStyle == "none" ? "block" : "none";
       this.menuStyle = menu.style.display;
     });
+    const mainPart = document.querySelector("main");
+    mainPart.addEventListener("click", () => {
+      const menu = document.getElementById("menu");
+      menu.style.display = this.menuStyle == "block" ? "none" : "none";
+      this.menuStyle = "none";
+    });
     const userButton = document.querySelector("#change-github");
     userButton.addEventListener("click", () => {
       const input = document.querySelector("#githubuser").value;

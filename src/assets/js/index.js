@@ -208,12 +208,12 @@ class ExchangeRates {
     const { base, date, rates } = data;
     const html = `
     <h4>Exchange Rates (${base})</h4>
-    <ul id="rates">
-    <li>$: ${rates.USD}</li>
-    <li>£: ${rates.GBP}</li>
-    <li>¥: ${rates.JPY}</li>
-    <li>SFr: ${rates.CHF}</li>
-    </ul>
+    <div id="rates">
+    <div class="row"><div>$:</div> <div class="right">${rates.USD}</div></div>
+    <div class="row"><div>£:</div <div class="right">${rates.GBP}</div></div>
+    <div class="row"><div>¥:</div> <div class="right">${rates.JPY}</div></div>
+    <div class="row"><div>SFr:</div <div class="right">${rates.CHF}</div></div>
+    </div>
     <p>valid of: ${date}</p>
     `;
     this.container.innerHTML = html;

@@ -246,5 +246,40 @@ label {
   font-size: 20pt;
 }
 
+#exchange {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.row div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
+}
+
+.row .right {
+  text-align: right;
+}
+
 
 /*# sourceMappingURL=style.css.map*/

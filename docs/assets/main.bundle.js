@@ -18010,7 +18010,7 @@ function () {
       var base = data.base,
           date = data.date,
           rates = data.rates;
-      var html = "\n    <h4>Exchange Rates (".concat(base, ")</h4>\n    <ul id=\"rates\">\n    <li>$: ").concat(rates.USD, "</li>\n    <li>\xA3: ").concat(rates.GBP, "</li>\n    <li>\xA5: ").concat(rates.JPY, "</li>\n    <li>SFr: ").concat(rates.CHF, "</li>\n    </ul>\n    <p>valid of: ").concat(date, "</p>\n    ");
+      var html = "\n    <h4>Exchange Rates (".concat(base, ")</h4>\n    <div id=\"rates\">\n    <div class=\"row\"><div>$:</div> <div class=\"right\">").concat(rates.USD, "</div></div>\n    <div class=\"row\"><div>\xA3:</div <div class=\"right\">").concat(rates.GBP, "</div></div>\n    <div class=\"row\"><div>\xA5:</div> <div class=\"right\">").concat(rates.JPY, "</div></div>\n    <div class=\"row\"><div>SFr:</div <div class=\"right\">").concat(rates.CHF, "</div></div>\n    </div>\n    <p>valid of: ").concat(date, "</p>\n    ");
       this.container.innerHTML = html;
     }
   }]);

@@ -137,7 +137,8 @@ class RepoSearch {
           created_at,
           language,
           has_pages,
-          pushed_at
+          pushed_at,
+          html_url
         } = repo;
         let shortDescription;
         if (description != null) {
@@ -148,16 +149,19 @@ class RepoSearch {
         } else {
           shortDescription = null;
         }
+        const pagesUrl = `https://${this.githubName}.github.io/${name}/`;
         return `
     <div class="image-card">
-    <h2>${name}</h2>
+    <a href="${html_url}" target=_blank><h2>${name}</h2></a>
     <div class="card-body">
     <ul>
     ${shortDescription != null ? `<li>${shortDescription}</li>` : ""}
     ${language != null ? `<li>main language: ${language}</li>` : ""}
     <li>created on ${this.getDate(created_at)}</li>
     <li>last push on ${this.getDate(pushed_at)}</li>
-    <li>published on GitHub Pages: ${has_pages ? "yes" : "no"}</li>
+    <li>published on GitHub Pages: ${
+      has_pages ? `<a href="${pagesUrl}" target=_blank>yes</a>` : "no"
+    }</li>
     </ul>
       </div>
       </div>

@@ -187,7 +187,7 @@ class RepoSearch {
   }
 }
 
-class ExchangeRates {
+/*class ExchangeRates {
   constructor(domSel) {
     this.container = document.querySelector(domSel);
     this.repeat();
@@ -224,7 +224,7 @@ class ExchangeRates {
     const newDate = revDateArray.join("/");
     return newDate;
   }
-}
+}*/
 const myTime = new Time("#time");
 const myGithub = new RepoSearch("#searchfield", "#repos");
-const exchange = new ExchangeRates("#exchange");
+//const exchange = new ExchangeRates("#exchange");

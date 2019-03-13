@@ -214,9 +214,15 @@ class ExchangeRates {
     <div class="row"><div>¥:</div> <div class="right">${rates.JPY}</div></div>
     <div class="row"><div>SFr:</div <div class="right">${rates.CHF}</div></div>
     </div>
-    <p>valid of: ${date}</p>
+    <p>valid of: ${this.convertDate(date)}</p>
     `;
     this.container.innerHTML = html;
+  }
+  convertDate(rawDate) {
+    const dateArray = rawDate.split("-");
+    const revDateArray = dateArray.reverse();
+    const newDate = revDateArray.join("/");
+    return newDate;
   }
 }
 const myTime = new Time("#time");

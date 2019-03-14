@@ -31,7 +31,6 @@ class RepoSearch {
   constructor(domSel, outputDomSel) {
     this.searchfield = document.querySelector(domSel);
     this.outputField = document.querySelector(outputDomSel);
-    this.githubName = "sklinkusch";
     this.initialBackground();
     this.initialRender();
     this.addEventListeners();
@@ -67,7 +66,7 @@ class RepoSearch {
     userButton.addEventListener("click", () => {
       const input = document.querySelector("#githubuser").value;
       if (input != "") {
-        this.githubName = input;
+        localStorage.setItem("githubName", input);
         this.initialRender();
       }
     });
@@ -112,11 +111,10 @@ class RepoSearch {
     localStorage.setItem("background", backgroundSource);
   }
   initialRender() {
-    const url = `https://api.github.com/users/${
-      this.githubName
-    }/repos?per_page=100&client_id=${process.env.ID}&client_secret=${
-      process.env.SECRET
-    }`;
+    const githubName = localStorage.getItem("githubName") || process.env.NAME;
+    const url = `https://api.github.com/users/${githubName}/repos?per_page=100&client_id=${
+      process.env.ID
+    }&client_secret=${process.env.SECRET}`;
     fetch(url)
       .then(response => response.json())
       .then(data => {
@@ -131,6 +129,7 @@ class RepoSearch {
         });
         this.data = sorted;
         this.updateData(sorted);
+        localStorage.setItem("githubName", githubName);
       })
       .catch(error => {
         console.log(error);
@@ -160,7 +159,9 @@ class RepoSearch {
         } else {
           shortDescription = null;
         }
-        const pagesUrl = `https://${this.githubName}.github.io/${name}/`;
+        const pagesUrl = `https://${localStorage.getItem(
+          "githubName"
+        )}.github.io/${name}/`;
         return `
     <div class="image-card">
     <a href="${html_url}" target=_blank><h2>${name}</h2></a>

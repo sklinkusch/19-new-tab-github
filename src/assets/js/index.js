@@ -95,8 +95,7 @@ class RepoSearch {
   }
   initialBackground() {
     const backgroundSource =
-      localStorage.getItem("background") ||
-      "assets/pawel-czerwinski-1424194-unsplash.jpg";
+      localStorage.getItem("background") || process.env.BG;
     document.body.style.backgroundImage = `url(${backgroundSource})`;
     const titlebar = document.querySelector(".fa-cog");
     const timeContainer = document.getElementById("time");

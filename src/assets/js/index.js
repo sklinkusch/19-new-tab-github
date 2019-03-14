@@ -91,7 +91,11 @@ class RepoSearch {
       });
     });
     const clearBtn = document.querySelector("#clear");
-    clearBtn.addEventListener("click", () => localStorage.clear());
+    clearBtn.addEventListener("click", () => {
+      localStorage.clear();
+      this.initialBackground();
+      this.initialRender();
+    });
     const removeBtn = document.querySelector("#delete-github");
     removeBtn.addEventListener("click", () => {
       localStorage.removeItem("githubName");

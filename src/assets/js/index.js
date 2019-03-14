@@ -132,7 +132,12 @@ class RepoSearch {
         this.data = sorted;
         this.updateData(sorted);
       })
-      .catch(error => console.log(error));
+      .catch(error => {
+        console.log(error);
+        alert(
+          "Oops! Something went wrong. Please look into the console for further information"
+        );
+      });
   }
   updateData(repos) {
     let html = repos

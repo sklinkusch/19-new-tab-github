@@ -90,6 +90,8 @@ class RepoSearch {
         localStorage.setItem("background", imageSource);
       });
     });
+    const clearBtn = document.querySelector("#clear");
+    clearBtn.addEventListener("click", () => localStorage.clear());
   }
   initialBackground() {
     const backgroundSource =
